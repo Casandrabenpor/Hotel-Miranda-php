@@ -1,5 +1,9 @@
+
+@extends('layout')
+
+@section('title', 'Contact')
 <body>
-   
+@section('content')
     <!-- SECTION TITLE -->
     <section class="section-title">
         <div class="text__title">
@@ -88,7 +92,7 @@
         <button type="button" class="section__text-button text_button text-center button__center">SEND</button>
 
     </section>
-   
+    @endsection
 <script src="../scripts/burger-nav.js"></script>
 </body>
 
