@@ -9,7 +9,7 @@
     <section class="section-title">
         <div class="text__title">
             <div class="title__header">
-                <h5 class="text__title pretitle">THE ULTIMATE LUXURY CASANDRA</h5>
+                <h5 class="text__title pretitle">THE ULTIMATE LUXURY </h5>
                 <h1 class="text__title title">About Us</h1>
             </div>
             <div class="page__title-container">
@@ -263,7 +263,9 @@
         </div>
     </section>
     @endsection
-
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="../scripts/burger-nav.js"></script>
+    <script src="../scripts/slide.js"></script>
  
 </body>
 
