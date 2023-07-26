@@ -36,7 +36,7 @@
  sicing elit, sed do eiusmod tempor.</p>
  <div class="section__gallery-text">
  <p class="text__room-price text-gray ">$345/Night</p>
- <p class="text__room-booking "><a href="../html/rooms-details.html"> Booking Now</a></p>
+ <p class="text__room-booking "><a href="../rooms-details.php"> Booking Now</a></p>
  </div>
 
  </div>
@@ -292,9 +292,10 @@
  <div id="paginationSection" class="section__gallery-pagination">
  <img src="../assets/section rooms/Pagination.png" alt="pagination" />
  </div>
- <?php $this->stopSection(); ?>
+
  <script src="../scripts/burger-nav.js"></script>
  <script src="../scripts/pagination.js"></script>
+ <?php $this->stopSection(); ?>
 </body>
 
 </html>

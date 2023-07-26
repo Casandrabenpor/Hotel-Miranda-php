@@ -262,10 +262,10 @@
             </div>
         </div>
     </section>
-    @endsection
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="../scripts/burger-nav.js"></script>
     <script src="../scripts/slide.js"></script>
+    @endsection
  
 </body>
 

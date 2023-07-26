@@ -176,9 +176,10 @@
  </div>
  </section>
 
- <?php $this->stopSection(); ?>
+
 
  <script src="../scripts/burger-nav.js"></script>
+ <?php $this->stopSection(); ?>
 </body>
 
 </html>

@@ -92,8 +92,8 @@
         <button type="button" class="section__text-button text_button text-center button__center">SEND</button>
 
     </section>
-    @endsection
 <script src="../scripts/burger-nav.js"></script>
+@endsection
 </body>
 
 </html>

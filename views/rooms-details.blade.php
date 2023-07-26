@@ -177,9 +177,10 @@
         </div>
     </section>
 
-    @endsection
+
 
     <script src="../scripts/burger-nav.js"></script>
+    @endsection
 </body>
 
 </html>

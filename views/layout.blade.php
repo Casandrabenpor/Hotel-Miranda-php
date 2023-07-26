@@ -14,7 +14,7 @@
   <header>
         <div class="nav__container-menu">
             <button class="nav__burger"></button>
-            <a href="../index.html">
+            <a href="../index.php">
                 <div class="nav__logo">
                     <div class="nav__container-logo">
                         <img src="../assets/nav/logo.png" alt="logo" />
@@ -25,10 +25,10 @@
 
         </div>
         <ul class="nav">
-            <li class="nav-link heartbeat"><a href="./about.html">About Us</a></li>
-            <li class="nav-link heartbeat"><a href="./rooms.html">Rooms</a></li>
-            <li class="nav-link heartbeat"><a href="./offers.html">Offers</a></li>
-            <li class="nav-link heartbeat"><a href="./contact.html">Contact</a></li>
+            <li class="nav-link heartbeat"><a href="./about.php">About Us</a></li>
+            <li class="nav-link heartbeat"><a href="./rooms.php">Rooms</a></li>
+            <li class="nav-link heartbeat"><a href="./offers.php">Offers</a></li>
+            <li class="nav-link heartbeat"><a href="./contact.php">Contact</a></li>
         </ul>
         <div class="nav__icons">
             <img src="../assets/nav/human.png" alt="human icon" />

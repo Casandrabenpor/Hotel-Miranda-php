@@ -1,3 +1,3 @@
 <?php  include('./bladeConfig.php');
-echo $blade->run("about");
+echo $blade->run("index");
 ?>
