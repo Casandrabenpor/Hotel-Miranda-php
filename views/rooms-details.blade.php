@@ -1,4 +1,9 @@
+
+@extends('layout')
+
+@section('title', 'Rooms details')
 <body>
+@section('content')
     <!-- SECTION TITLE -->
     <section class="section-title">
         <div class="text__title">
@@ -172,7 +177,7 @@
         </div>
     </section>
 
-  
+    @endsection
 
     <script src="../scripts/burger-nav.js"></script>
 </body>

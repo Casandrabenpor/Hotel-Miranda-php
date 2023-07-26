@@ -1,7 +1,8 @@
+@extends('layout')
 
-
+@section('title', 'Rooms')
 <body>
-   
+@section('content')
     <!-- SECTION TITLE -->
     <section class="section-title">
         <div class="text__title">
@@ -291,7 +292,7 @@
     <div id="paginationSection" class="section__gallery-pagination">
         <img src="../assets/section rooms/Pagination.png" alt="pagination" />
     </div>
-
+    @endsection
     <script src="../scripts/burger-nav.js"></script>
     <script src="../scripts/pagination.js"></script>
 </body>
