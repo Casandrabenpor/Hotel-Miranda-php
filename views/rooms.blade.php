@@ -2,7 +2,20 @@
 
 @section('title', 'Rooms')
 <body>
-@section('content')
+    @section('content')
+    
+
+    
+<?php 
+//     include('./database.php');
+//     $db =new DatabaseConnector();
+//     $sql = "SELECT * FROM rooms";
+
+//    $result = $db->doSelectQuery($sql);
+//    foreach ($result as $row ) {
+//         echo "ID: " . $row['id'] . ", Room number: " . $row['room_number'] . "<br>";
+//     }
+?>
     <!-- SECTION TITLE -->
     <section class="section-title">
         <div class="text__title">
