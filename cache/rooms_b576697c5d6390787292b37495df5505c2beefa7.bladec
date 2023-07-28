@@ -6,7 +6,7 @@
  
 
  
- <?php 
+<?php 
  include('./database.php');
  $db =new DatabaseConnector();
  $sql = "SELECT * FROM rooms";
