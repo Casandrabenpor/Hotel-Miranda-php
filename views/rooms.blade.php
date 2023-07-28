@@ -4,18 +4,15 @@
 <body>
     @section('content')
     
-
-    
 <?php 
-//     include('./database.php');
-//     $db =new DatabaseConnector();
-//     $sql = "SELECT * FROM rooms";
+    include('./database.php');
+    $db = new DatabaseConnector();
+    $sql = "SELECT * FROM rooms";
 
-//    $result = $db->doSelectQuery($sql);
-//    foreach ($result as $row ) {
-//         echo "ID: " . $row['id'] . ", Room number: " . $row['room_number'] . "<br>";
-//     }
+    $result = $db->doSelectQuery($sql);
+  
 ?>
+
     <!-- SECTION TITLE -->
     <section class="section-title">
         <div class="text__title">
@@ -35,6 +32,11 @@
     </section>
     <!-- SECTION GALLERY -->
     <section id="section__gallery-grid">
+    <?php foreach ($result as $row) {
+        $bedType = $row['bed_type'];
+        $rate = $row['rate'];
+    }
+    ?>
         <div class="section__gallery active-img">
 
 
@@ -43,12 +45,12 @@
             <div class="section_button-rooms section_button-rooms-btn">
                 <img src="../assets/section rooms/room-button.png" alt="button rooms" />
             </div>
-            <h4 class="text__room-title text-center text-black">Minimal Duplex Room</h4>
+            <h4 class="text__room-title text-center text-black"><?php echo $bedType; ?></h4>
             <p class="text__room-paragraph text-center text-gray-color">Lorem ipsum dolor sit amet, consectetur
                 adipi
                 sicing elit, sed do eiusmod tempor.</p>
             <div class="section__gallery-text">
-                <p class="text__room-price text-gray ">$345/Night</p>
+            <p class="text__room-price text-gray"><?php echo '$' . $rate . '/Night'; ?></p>
                 <p class="text__room-booking "><a href="../rooms-details.php"> Booking Now</a></p>
             </div>
 
@@ -58,11 +60,11 @@
             <div class="section_button-rooms section_button-rooms-btn">
                 <img src="../assets/section rooms/room-button.png" alt="button rooms" />
             </div>
-            <h4 class="text__room-title text-center text-black">Minimal Duplex Room</h4>
+            <h4 class="text__room-title text-center text-black"><?php echo $bedType; ?></h4>
             <p class="text__room-paragraph text-center text-gray-color">Lorem ipsum dolor sit amet, consectetur adipi
                 sicing elit, sed do eiusmod tempor.</p>
             <div class="section__gallery-text">
-                <p class="text__room-price text-gray ">$345/Night</p>
+            <p class="text__room-price text-gray"><?php echo '$' . $rate . '/Night'; ?></p>
                 <p class="text__room-booking "> Booking Now</p>
             </div>
         </div>
@@ -71,11 +73,11 @@
             <div class="section_button-rooms section_button-rooms-btn">
                 <img src="../assets/section rooms/room-button.png" alt="button rooms" />
             </div>
-            <h4 class="text__room-title text-center text-black">Minimal Duplex Room</h4>
+            <h4 class="text__room-title text-center text-black"><?php echo $bedType; ?></h4>
             <p class="text__room-paragraph text-center text-gray-color">Lorem ipsum dolor sit amet, consectetur adipi
                 sicing elit, sed do eiusmod tempor.</p>
             <div class="section__gallery-text">
-                <p class="text__room-price text-gray ">$345/Night</p>
+             <p class="text__room-price text-gray"><?php echo '$' . $rate . '/Night'; ?></p>
                 <p class="text__room-booking "> Booking Now</p>
             </div>
         </div>
@@ -84,11 +86,11 @@
             <div class="section_button-rooms section_button-rooms-btn">
                 <img src="../assets/section rooms/room-button.png" alt="button rooms" />
             </div>
-            <h4 class="text__room-title text-center text-black">Minimal Duplex Room</h4>
+            <h4 class="text__room-title text-center text-black"><?php echo $bedType; ?></h4>
             <p class="text__room-paragraph text-center text-gray-color">Lorem ipsum dolor sit amet, consectetur adipi
                 sicing elit, sed do eiusmod tempor.</p>
             <div class="section__gallery-text">
-                <p class="text__room-price text-gray ">$345/Night</p>
+              <p class="text__room-price text-gray"><?php echo '$' . $rate . '/Night'; ?></p>
                 <p class="text__room-booking "> Booking Now</p>
             </div>
         </div>
@@ -192,7 +194,7 @@
             <p class="text__room-paragraph text-center text-gray-color">Lorem ipsum dolor sit amet, consectetur adipi
                 sicing elit, sed do eiusmod tempor.</p>
             <div class="section__gallery-text">
-                <p class="text__room-price text-gray ">$345/Night</p>
+                <p class="text__room-price text-gray"><?php echo '$' . $rate . '/Night'; ?></p>
                 <p class="text__room-booking "> Booking Now</p>
             </div>
         </div>
@@ -205,7 +207,7 @@
             <p class="text__room-paragraph text-center text-gray-color">Lorem ipsum dolor sit amet, consectetur adipi
                 sicing elit, sed do eiusmod tempor.</p>
             <div class="section__gallery-text">
-                <p class="text__room-price text-gray ">$345/Night</p>
+               <p class="text__room-price text-gray"><?php echo '$' . $rate . '/Night'; ?></p>
                 <p class="text__room-booking "> Booking Now</p>
             </div>
         </div>
@@ -218,7 +220,7 @@
             <p class="text__room-paragraph text-center text-gray-color">Lorem ipsum dolor sit amet, consectetur adipi
                 sicing elit, sed do eiusmod tempor.</p>
             <div class="section__gallery-text">
-                <p class="text__room-price text-gray ">$345/Night</p>
+               <p class="text__room-price text-gray"><?php echo '$' . $rate . '/Night'; ?></p>
                 <p class="text__room-booking "> Booking Now</p>
             </div>
         </div>
