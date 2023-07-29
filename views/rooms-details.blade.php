@@ -4,6 +4,37 @@
 @section('title', 'Rooms details')
 <body>
 @section('content')
+<?php
+include('./database.php');
+$db = new DatabaseConnector();
+
+// Recuperar el valor del parámetro "id" de la URL
+if (isset($_GET['id'])) {
+    $room_id = $_GET['id'];
+
+    // Consulta SQL utilizando el valor del "id" recuperado
+    $sql = "SELECT * FROM rooms WHERE id = $room_id";
+    $result = $db->doSelectQuery($sql);
+  // Si se encontraron resultados, mostrar los detalles de la habitación
+  if ($result && $row = $result[0]) {
+        // Ahora puedes mostrar los detalles de la habitación en el resto del código HTML
+        // Puedes acceder a los detalles de la habitación usando $row['columna']
+?>
+<?php
+} else {
+    // Si no se encontraron resultados para el id dado, ocurrirá lo siguiente
+    echo "Habitación no encontrada.";
+}
+} else {
+// Si no se proporcionó el parámetro "id" en la URL, ocurrirá lo siguiente
+echo "No se proporcionó el identificador de la habitación.";
+}
+?>
+
+
+
+
+
     <!-- SECTION TITLE -->
     <section class="section-title">
         <div class="text__title">
@@ -25,9 +56,9 @@
     <section>
         <div class="section__room">
             <div class="section__room-detail">
-                <p class="text__small-section text-gray-color">DOUBLE BED</p>
+                <p class="text__small-section text-gray-color">{{$row['bed_type']}}</p>
                 <p class="text__big-section">Luxury Double Bed</p>
-                <p class="text__number-room-details text-gray">$345/Night</p>
+                <p class="text__number-room-details text-gray">${{$row['rate']}}</p>
                 <img src="../assets/hotel/bed.jpg" class="image-roomDetail" alt="hotel" />
             </div>
             <div class="section__room-detail-calendar">
@@ -69,7 +100,7 @@
                 modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
         </div>
 
-
+   
 
     </section>
     <!-- SECTION AMENITIES -->
@@ -149,12 +180,12 @@
                 <div class="section_button-rooms section_button-rooms-detail-btn">
                     <img src="../assets/section rooms/room-button.png" alt="button rooms" />
                 </div>
-                <h4 class="text__room-title text-center text-black">Minimal Duplex Room</h4>
+                <h4 class="text__room-title text-center text-black">{{$row['bed_type']}}</h4>
                 <p class="text__room-paragraph text-center text-gray-color">Lorem ipsum dolor sit amet, consectetur
                     adipi
                     sicing elit, sed do eiusmod tempor.</p>
                 <div class="section__gallery-text">
-                    <p class="text__room-price text-gray ">$345/Night</p>
+                    <p class="text__room-price text-gray ">${{$row['offer_price']}}</p>
                     <p class="text__room-booking "> Booking Now</p>
                 </div>
             </div>
@@ -165,16 +196,17 @@
                 <div class="section_button-rooms section_button-rooms-detail-btn">
                     <img src="../assets/section rooms/room-button.png" alt="button rooms" />
                 </div>
-                <h4 class="text__room-title text-center text-black">Minimal Duplex Room</h4>
+                <h4 class="text__room-title text-center text-black">{{$row['bed_type']}}</h4>
                 <p class="text__room-paragraph text-center text-gray-color">Lorem ipsum dolor sit amet, consectetur
                     adipi
                     sicing elit, sed do eiusmod tempor.</p>
                 <div class="section__gallery-text">
-                    <p class="text__room-price text-gray ">$345/Night</p>
+                    <p class="text__room-price text-gray ">${{$row['offer_price']}}</p>
                     <p class="text__room-booking "> Booking Now</p>
                 </div>
             </div>
         </div>
+
     </section>
 
 
