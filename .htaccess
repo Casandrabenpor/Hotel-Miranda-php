@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteCond %{REQUEST_URI} !^/(index\.php|rooms\.php|contact\.php|about\.php|offers\.php|error\.php|rooms-details\.php|assets\/(.)*)$
+# Redirigir todas las demás solicitudes a un archivo de error o página de "Acceso denegado"
+RewriteRule ^ /error.php [L]

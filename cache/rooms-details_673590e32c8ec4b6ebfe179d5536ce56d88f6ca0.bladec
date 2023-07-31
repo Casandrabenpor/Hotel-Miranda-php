@@ -16,25 +16,17 @@ if (isset($_GET['id'])) {
  $result = $db->doSelectQuery($sql);
  // Si se encontraron resultados, mostrar los detalles de la habitación
  if ($result && $row = $result[0]) {
- // Ahora puedes mostrar los detalles de la habitación en el resto del código HTML
- // Puedes acceder a los detalles de la habitación usando $row['columna']
 ?>
 <?php
 } else {
- // Si no se encontraron resultados para el id dado, ocurrirá lo siguiente
  echo "Habitación no encontrada.";
 }
 } else {
-// Si no se proporcionó el parámetro "id" en la URL, ocurrirá lo siguiente
 echo "No se proporcionó el identificador de la habitación.";
 }
 ?>
 
-
-
-
-
- <!-- SECTION TITLE -->
+<!-- SECTION TITLE -->
  <section class="section-title">
  <div class="text__title">
  <div class="title__header">
