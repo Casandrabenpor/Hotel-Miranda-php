@@ -1,4 +1,6 @@
 <?php
+// Crear una instancia de la clase DatabaseConnector
+require_once './database.php';
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Obtener los datos del formulario
     $name = $_POST["name"];
@@ -13,10 +15,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     echo "Asunto: " . $subject . "<br>";
     echo "Message: " . $message . "<br>";
 
-    // Crear una instancia de la clase DatabaseConnector
-    require_once './database.php';
     $db = new DatabaseConnector();
-
+    $db->openConnection();
     $mysqli = $db->getMysqli();
     // Escapar los datos para prevenir inyecciones SQL (opcional, pero recomendado)
     $name = $mysqli->real_escape_string($name);
