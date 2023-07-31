@@ -68,5 +68,9 @@ class DatabaseConnector
     {
         $this->mysqli->close();
     }
+    public function getMysqli()
+    {
+        return $this->mysqli;
+    }
 }
 ?>

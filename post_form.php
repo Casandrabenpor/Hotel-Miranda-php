@@ -1,5 +1,5 @@
 <?php
-if (isset($_POST['submit'])) {
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Obtener los datos del formulario
     $name = $_POST["name"];
     $phone = $_POST["phone"];
@@ -17,12 +17,13 @@ if (isset($_POST['submit'])) {
     require_once './database.php';
     $db = new DatabaseConnector();
 
+    $mysqli = $db->getMysqli();
     // Escapar los datos para prevenir inyecciones SQL (opcional, pero recomendado)
-    $name = $db->mysqli->real_escape_string($name);
-    $phone = $db->mysqli->real_escape_string($phone);
-    $subject = $db->mysqli->real_escape_string($subject);
-    $email = $db->mysqli->real_escape_string($email);
-    $message = $db->mysqli->real_escape_string($message);
+    $name = $mysqli->real_escape_string($name);
+    $phone = $mysqli->real_escape_string($phone);
+    $subject = $mysqli->real_escape_string($subject);
+    $email = $mysqli->real_escape_string($email);
+    $message = $mysqli->real_escape_string($message);
 
     // Construir la consulta SQL con sentencia preparada
     $query = "INSERT INTO post_form (name, phone, subject, email, message) 
