@@ -7,6 +7,11 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
  <link rel="stylesheet" href="../styles/styles.css" />
+ <!-- Incluir jQuery -->
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+ <!-- Incluir Toastr -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+
  <script src="https://kit.fontawesome.com/fef5116784.js" crossorigin="anonymous"></script>
  <title><?php echo $this->yieldContent('title'); ?></title>
 </head>
@@ -86,3 +91,4 @@
 
  </footer>
  
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>

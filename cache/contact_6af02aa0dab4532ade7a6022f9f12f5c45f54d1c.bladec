@@ -89,10 +89,11 @@
  </div>
 
 
- <button type="submit" class="section__text-button text_button text-center button__center">SEND</button>
+ <button  type="submit" class="section__text-button text_button text-center button__center">SEND</button>
  </form>
  </section>
 <script src="../scripts/burger-nav.js"></script>
+
 <?php $this->stopSection(); ?>
 </body>
 

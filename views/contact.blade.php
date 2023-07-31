@@ -56,7 +56,7 @@
     <div class="section_image"> </div>
     <!-- SECTION ENTER CONTACT -->
     <section>
-        <form action="post_form.php" method="post">
+        <form action="" method="post">
         <div id="contact__form">
 
             <div class="contact__form-container">
@@ -90,10 +90,11 @@
         </div>
 
 
-        <button type="submit" class="section__text-button text_button text-center button__center">SEND</button>
+        <button  type="submit" class="section__text-button text_button text-center button__center">SEND</button>
     </form>
     </section>
 <script src="../scripts/burger-nav.js"></script>
+
 @endsection
 </body>
 
