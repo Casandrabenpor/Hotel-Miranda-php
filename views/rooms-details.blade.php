@@ -27,11 +27,7 @@ echo "No se proporcionó el identificador de la habitación.";
 }
 ?>
 
-
-
-
-
-    <!-- SECTION TITLE -->
+<!-- SECTION TITLE -->
     <section class="section-title">
         <div class="text__title">
             <div class="title__header">

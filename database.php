@@ -27,6 +27,7 @@ class DatabaseConnector
         }
 
     }
+
     public function doSelectQuery($query)
     {
         $this->openConnection();
@@ -39,6 +40,30 @@ class DatabaseConnector
         $this->closeConnection();
         return $array;
     }
+
+    public function query($sql)
+    {
+        $this->openConnection();
+
+        // Preparar la consulta
+        $stmt = $this->mysqli->prepare($sql);
+
+        // Verificar si ocurrió algún error en la preparación
+        if (!$stmt) {
+            die("Query preparation failed: " . $this->mysqli->error);
+        }
+
+        // Ejecutar la consulta
+        $result = $stmt->execute();
+
+        // Cerrar el statement
+        $stmt->close();
+
+        $this->closeConnection();
+
+        return $result;
+    }
+
     public function closeConnection()
     {
         $this->mysqli->close();
