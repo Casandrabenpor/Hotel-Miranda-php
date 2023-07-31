@@ -56,7 +56,7 @@
     <div class="section_image"> </div>
     <!-- SECTION ENTER CONTACT -->
     <section>
-        <form action="" method="post">
+        <form action="post_form.php" method="post">
         <div id="contact__form">
 
             <div class="contact__form-container">

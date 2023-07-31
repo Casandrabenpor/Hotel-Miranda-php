@@ -1,7 +1,6 @@
 <?php
 require_once './validation.php';
 
-require_once './database.php';
 
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
@@ -20,6 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             echo $error . "<br>";
         }
     } else {
+        require_once './database.php';
         $db = new DatabaseConnector();
         $db->openConnection();
         $mysqli = $db->getMysqli();
