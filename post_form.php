@@ -1,32 +1,19 @@
 <?php
-// Crear una instancia de la clase DatabaseConnector
+require_once './validation.php';
+
 require_once './database.php';
-$errors = array();
+
+
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Obtener los datos del formulario y validarlos
     $name = trim($_POST["name"]);
-    if (empty($name)) {
-        $errors[] = "El nombre es obligatorio.";
-    }
-
     $phone = trim($_POST["phone"]);
-    // Aquí podrías aplicar más validaciones según tus requisitos (por ejemplo, longitud, formato, etc.)
-
     $subject = trim($_POST["subject"]);
-    if (empty($subject)) {
-        $errors[] = "El asunto es obligatorio.";
-    }
-
     $email = trim($_POST["email"]);
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $errors[] = "El email no es válido.";
-    }
-
     $message = trim($_POST["message"]);
-    if (empty($message)) {
-        $errors[] = "El mensaje es obligatorio.";
-    }
 
+    // Validar los campos del formulario
+    $errors = validationForm($name, $phone, $subject, $email, $message);
     // Si hay errores, mostrarlos al usuario
     if (!empty($errors)) {
         foreach ($errors as $error) {
@@ -36,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $db = new DatabaseConnector();
         $db->openConnection();
         $mysqli = $db->getMysqli();
-        // Escapar los datos para prevenir inyecciones SQL (opcional, pero recomendado)
+        // Escapar los datos para prevenir inyecciones SQL 
         $name = $mysqli->real_escape_string($name);
         $phone = $mysqli->real_escape_string($phone);
         $subject = $mysqli->real_escape_string($subject);
