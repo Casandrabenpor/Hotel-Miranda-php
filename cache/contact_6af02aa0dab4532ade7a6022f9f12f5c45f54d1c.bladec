@@ -51,7 +51,9 @@
  </div>
 
  </section>
- <div class="section_image"> </div>
+ <div class="section_contact-map">
+ <img src="../assets/footer/contact.jpg" class="section_image" alt="contact" />
+ </div>
  <!-- SECTION ENTER CONTACT -->
  <section>
  <form action="" method="post">

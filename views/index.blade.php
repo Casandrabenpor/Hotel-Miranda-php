@@ -29,7 +29,7 @@
                 <h6 class="section__text-calendar text-white">Departure Date</h6>
                 <input type="date" placeholder="30th march 2020" />
             </div>
-            <button type="button" class="section__text-button-homeCheck text_button ">CHECK AVAILABILITY</button>
+            <button type="button" class="section__text-button-homeCheck text_button  heartbeat">CHECK AVAILABILITY</button>
         </div>
     </section>
     <!-- SECTION ABOUT -->

@@ -1,7 +1,7 @@
 <?php $_shouldextend[1]=1; ?>
 
 <?php $this->startSection('title', 'Rooms details'); ?>
-<body>
+
 <?php $this->startSection('content'); ?>
 <?php
 include('./database.php');
@@ -204,7 +204,5 @@ echo "No se proporcionó el identificador de la habitación.";
 
  <script src="../scripts/burger-nav.js"></script>
  <?php $this->stopSection(); ?>
-</body>
 
-</html>
 <?php if (isset($_shouldextend[1])) { echo $this->runChild('layout'); } ?>

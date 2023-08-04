@@ -2,16 +2,16 @@
 
 @section('title', 'Rooms')
 
-    @section('content')
-    
-<?php 
-    include('./database.php');
+@section('content')
+
+    <?php
+    include './database.php';
     $db = new DatabaseConnector();
-    $sql = "SELECT * FROM rooms";
-
+    $sql = 'SELECT * FROM rooms';
+    
     $result = $db->doSelectQuery($sql);
-
-?>
+    
+    ?>
 
     <!-- SECTION TITLE -->
     <section class="section-title">
@@ -33,23 +33,26 @@
     <!-- SECTION GALLERY -->
     <section id="section__gallery-grid">
         @foreach ($result as $row)
-         <div class="section__gallery active-img">
-        <img src="../assets/hotel/bed_small.jpg" class="section_image" alt="duplex room" />
-        <div class="section_button-rooms section_button-rooms-btn">
-                <img src="../assets/section rooms/room-button.png" alt="button rooms" />
+            <div class="section__gallery active-img">
+                <img src="../assets/hotel/bed_small.jpg" class="section_image" alt="duplex room" />
+                <div class="section_button-rooms section_button-rooms-btn">
+                    <img src="../assets/section rooms/room-button.png" alt="button rooms" />
                 </div>
-            <h4 class="text__room-title text-center text-black">{{$row['bed_type']}}</h4>
-            <p class="text__room-paragraph text-center text-gray-color">Lorem ipsum dolor sit amet, consectetur
-            adipi
-                sicing elit, sed do eiusmod tempor.</p>
+                <h4 class="text__room-title text-center text-black">{{ $row['bed_type'] }}</h4>
+                <p class="text__room-paragraph text-center text-gray-color">Lorem ipsum dolor sit amet, consectetur
+                    adipi
+                    sicing elit, sed do eiusmod tempor.
+                </p>
                 <div class="section__gallery-text">
-                <p class="text__room-price text-gray">${{$row['rate']}}/Night</p>
-                <p class="text__room-booking"><a href="../rooms-details.php?id={{$row['id']}}">Booking Now</a></p>
+                    <p class="text__room-price text-gray">${{ $row['rate'] }}/Night</p>
+                    <p class="text__room-booking">
+                        <a href="../rooms-details.php?id={{ $row['id'] }}">Booking Now
+                        </a>
+                    </p>
 
+                </div>
             </div>
-            
-            </div>
-            @endforeach
+        @endforeach
     </section>
     <div id="paginationSection" class="section__gallery-pagination">
         <img src="../assets/section rooms/Pagination.png" alt="pagination" />
@@ -57,4 +60,4 @@
 
     <script src="../scripts/burger-nav.js"></script>
     <script src="../scripts/pagination.js"></script>
-    @endsection
+@endsection
