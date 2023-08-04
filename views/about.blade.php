@@ -3,7 +3,6 @@
 
 @section('title', 'About Us')
 
-<body>
 @section('content')
     <!-- SECTION TITLE -->
     <section class="section-title">
@@ -267,6 +266,5 @@
     <script src="../scripts/slide.js"></script>
     @endsection
  
-</body>
 
-</html>
+

@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('title', 'Rooms')
-<body>
+
     @section('content')
     
 <?php 
@@ -58,6 +58,3 @@
     <script src="../scripts/burger-nav.js"></script>
     <script src="../scripts/pagination.js"></script>
     @endsection
-</body>
-
-</html>

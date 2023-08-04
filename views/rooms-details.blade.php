@@ -2,7 +2,7 @@
 @extends('layout')
 
 @section('title', 'Rooms details')
-<body>
+
 @section('content')
 <?php
 include('./database.php');
@@ -205,6 +205,3 @@ echo "No se proporcionó el identificador de la habitación.";
 
     <script src="../scripts/burger-nav.js"></script>
     @endsection
-</body>
-
-</html>

@@ -16,6 +16,7 @@
     <title>@yield('title')</title>
 </head>
   <!-- HEADER -->
+  <body>
   <header>
         <div class="nav__container-menu">
             <button class="nav__burger"></button>
@@ -90,5 +91,7 @@
         </div>
 
     </footer>
-  
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+  </body>
+</html>

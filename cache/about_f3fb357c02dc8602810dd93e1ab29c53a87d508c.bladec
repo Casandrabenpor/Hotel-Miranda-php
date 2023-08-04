@@ -2,7 +2,6 @@
 
 <?php $this->startSection('title', 'About Us'); ?>
 
-<body>
 <?php $this->startSection('content'); ?>
  <!-- SECTION TITLE -->
  <section class="section-title">
@@ -266,7 +265,7 @@
  <script src="../scripts/slide.js"></script>
  <?php $this->stopSection(); ?>
  
-</body>
 
-</html>
+
+
 <?php if (isset($_shouldextend[1])) { echo $this->runChild('layout'); } ?>

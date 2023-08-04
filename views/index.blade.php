@@ -4,7 +4,6 @@
 
 @section('title', 'Index')
 
-<body>
 @section('content')
 
     <!-- SECTION TITLE HOME -->
@@ -478,6 +477,3 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="./scripts/slide.js"></script>
     @endsection
-</body>
-
-</html>

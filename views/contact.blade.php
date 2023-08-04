@@ -2,7 +2,6 @@
 @extends('layout')
 
 @section('title', 'Contact')
-<body>
 
 @section('content')
     <!-- SECTION TITLE -->
@@ -96,6 +95,5 @@
 <script src="../scripts/burger-nav.js"></script>
 
 @endsection
-</body>
 
-</html>
+

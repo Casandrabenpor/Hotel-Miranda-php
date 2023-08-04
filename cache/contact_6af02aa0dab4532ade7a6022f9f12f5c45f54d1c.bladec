@@ -1,7 +1,6 @@
 <?php $_shouldextend[1]=1; ?>
 
 <?php $this->startSection('title', 'Contact'); ?>
-<body>
 
 <?php $this->startSection('content'); ?>
  <!-- SECTION TITLE -->
@@ -95,7 +94,7 @@
 <script src="../scripts/burger-nav.js"></script>
 
 <?php $this->stopSection(); ?>
-</body>
 
-</html>
+
+
 <?php if (isset($_shouldextend[1])) { echo $this->runChild('layout'); } ?>

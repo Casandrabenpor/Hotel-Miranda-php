@@ -2,7 +2,6 @@
 
 <?php $this->startSection('title', 'Index'); ?>
 
-<body>
 <?php $this->startSection('content'); ?>
 
  <!-- SECTION TITLE HOME -->
@@ -476,7 +475,5 @@
  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
  <script src="./scripts/slide.js"></script>
  <?php $this->stopSection(); ?>
-</body>
 
-</html>
 <?php if (isset($_shouldextend[1])) { echo $this->runChild('layout'); } ?>
